@@ -114,6 +114,7 @@ shoplist.list=[
 ];
 //商品列表
 
+
 var item_html="<li id={{id}} class='buy_item'>{{num}}.{{item}}<div class='price'>{{price}}</div><div id={{del_id}} data-delid={{del_item_id}} class='del_btn'>X</div></li>";
 var total_html="<li class='buy_item total'>總價<div class='price'>{{price}}</div></li>";
 //HTML 數值套入
@@ -122,7 +123,8 @@ function showlist(){
   $("#items_list").html("");
   var total_price=0;
 //清空項目
-  for(var i=0;i<shoplist.list.length;i++){
+
+	for(var i=0;i<shoplist.list.length;i++){
     var item=shoplist.list[i];
     var item_id="buyitem_"+i;
     var del_item_id="del_buyitem_"+i;
@@ -157,21 +159,28 @@ function showlist(){
 
 showlist();
 //執行後,程式只會跑一次
+	$(".addbtn").click(
+		function(){
+			if(shoplist.list.length<=2){
+			shoplist.list.push(
+				{
+					
+						name:$("#input_name").val(),
+						price: $("#input_price").val()
+					
+				}
+				
+			);
+			}
+			$("#input_name").val("");
+			$("#input_price").val("");
+		
+			showlist();
+			
+		}
 
-$(".addbtn").click(
-  function(){
-    shoplist.list.push(
-      {
-        name:$("#input_name").val(),
-        price: $("#input_price").val()
-      }
-    );
-    $("#input_name").val("");
-    $("#input_price").val("");
-    showlist();
-  }
-  
-);
+	);
+
 
 //val("")->()裡給數值..
 //push重新重整清單
