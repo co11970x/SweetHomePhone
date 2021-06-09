@@ -3,5 +3,6 @@
 <h4><p align="center"><a href="https://gyazo.com/3cf003db69eb22d955a0f8392a017091"><img src="https://i.gyazo.com/3cf003db69eb22d955a0f8392a017091.gif" alt="Image from Gyazo" width="400"/></a></p><p align="center">頁面切換，圓形按鈕回主畫面，按下方按鈕會震動、旋轉</p></h4>
 <h2>說明</h2>
 <ul>
+  <li>功能的結合，相當有趣。</li>
   <li>我的專案"SmallPone","ShoppingList"合成版</li>
 </ul>
